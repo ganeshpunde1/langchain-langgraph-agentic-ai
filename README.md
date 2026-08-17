@@ -67,4 +67,5 @@ llm = ChatOllama(model="llama3.2")
 ollama --help
 ollama list
 ollama pull llama3.2
+ollama run llama3.2
 ```
