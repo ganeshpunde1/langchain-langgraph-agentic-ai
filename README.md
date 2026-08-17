@@ -69,3 +69,32 @@ ollama list
 ollama pull llama3.2
 ollama run llama3.2
 ```
+In Ollama models, **`temperature` controls how creative or random the model's answers are**.
+
+For example:
+
+```python
+from langchain_ollama import ChatOllama
+
+llm = ChatOllama(
+    model="llama3.2",
+    temperature=0
+)
+```
+
+* `temperature=0` → more consistent, focused, predictable
+* `temperature=0.5` → balanced
+* `temperature=1` → more creative and varied
+* Higher values → more randomness
+
+For coding, RAG, and factual AI agents, I would usually start with:
+
+```python
+temperature=0
+```
+
+For creative writing or brainstorming:
+
+```python
+temperature=0.7
+```
